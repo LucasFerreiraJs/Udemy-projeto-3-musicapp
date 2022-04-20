@@ -2,13 +2,20 @@ import { createStore } from 'vuex';
 
 export default createStore({
   state: {
-  },
-  getters: {
+    authModalShow: false,
   },
   mutations: {
+    toogleAuthModal: (state) => {
+      state.authModalShow = !state.authModalShow;
+    },
   },
-  actions: {
+  getters: {
+    authModalShow: (state) => state.authModalShow,
   },
-  modules: {
-  },
+  // getters: {
+  // },
+  // actions: {
+  // },
+  // modules: {
+  // },
 });
