@@ -85,16 +85,21 @@
 
 
           <!-- Registration Form -->
-          <form
+          <vee-form
             v-show="tab === 'register' "
+            v-bind:validation-schema="schema"
           >
             <!-- Name -->
             <div class="mb-3">
               <label class="inline-block mb-2">Name</label>
-              <input type="text"
+              <vee-field
+                name="name"
+                type="text"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
-                placeholder="Enter Name" />
+                placeholder="Enter Name"
+              />
+              <ErrorMessage class="text-red-600" name="name"/>
             </div>
             <!-- Email -->
             <div class="mb-3">
@@ -148,7 +153,7 @@
                 hover:bg-purple-700">
               Submit
             </button>
-          </form>
+          </vee-form>
 
           <!-- </transition-group> -->
         </div>
@@ -176,7 +181,16 @@ export default {
   },
   data(){
     return{
-      tab: 'login'
+      tab: 'login',
+      schema: {
+        name: 'required',
+        email: '',
+        age: '',
+        password: '',
+        confirm_password: '',
+        country: '',
+        tos: '',
+      },
     };
   },
   methods: {
