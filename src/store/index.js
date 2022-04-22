@@ -56,6 +56,11 @@ export default createStore({
       await auth.signOut();
 
       commit('toggleAuth');
+
+      /* if (payload.route.meta.requiresAuth) {
+        console.log('redirect signout');
+        payload.router.push({ name: 'home' });
+      } */
     },
   },
   // getters: {
