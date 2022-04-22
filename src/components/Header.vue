@@ -8,18 +8,24 @@
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
-          <li>
+          <li v-if="!userLoggedIn">
             <a
               class="px-2 text-white"
               href="#"
-              v-on:click.prevent="toogleAuthModal"
+              v-on:click.prevent="toggleAuthModal"
             >
               Login / Register
             </a>
           </li>
-          <li>
-            <a class="px-2 text-white" href="#">Manage</a>
-          </li>
+          <template v-else>
+            <li>
+              <a class="px-2 text-white" href="#">Manage</a>
+            </li>
+            <li>
+              <a class="px-2 text-white" href="#" v-on:click.prevent="signout">Logout</a>
+            </li>
+          </template>
+
         </ul>
       </div>
     </nav>
@@ -28,16 +34,21 @@
 
 <script>
 /* eslint-disable */
-import { mapMutations } from 'vuex';
+import { mapMutations, mapState, mapActions} from 'vuex';
 
 
 export default {
   name: 'AppHeader',
-  methods: {
-    ...mapMutations(['toogleAuthModal']),
+  computed:{
+    ...mapState(['userLoggedIn']),
 
-    // toogleAuthModal() {
-    //   this.$store.commit('toogleAuthModal');
+  },
+  methods: {
+    ...mapMutations(['toggleAuthModal']),
+    ...mapActions(['signout']),
+
+    // toggleAuthModal() {
+    //   this.$store.commit('toggleAuthModal');
     //   // console.log(this.$store.state.authModalShow);
     // },
   },
