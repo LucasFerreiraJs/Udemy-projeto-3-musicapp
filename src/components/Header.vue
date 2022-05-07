@@ -15,7 +15,7 @@
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
-           <li>
+           <!-- <li>
             <router-link
               class="px-2 text-white"
               to="/about"
@@ -23,7 +23,7 @@
               About
             </router-link>
 
-          </li>
+          </li> -->
           <li v-if="!userLoggedIn">
             <a
               class="px-2 text-white"

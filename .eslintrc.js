@@ -13,14 +13,14 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    "vuejs-accessibility/label-has-for": 'off',
+    'vuejs-accessibility/label-has-for': 'off',
     // 'max-len': ['error', { code: 170 }],
     // 'max-len': ["warn", { "code": 140 }],
-    "ignoreComments": 'off',
-    "skipBlankLines": 'off',
+    ignoreComments: 'off',
+    skipBlankLines: 'off',
     'no-trailing-spaces': 0,
-    /*eslint linebreak-style: ["error", "windows"]*/
-    "linebreak-style": 0,
+    /* eslint linebreak-style: ["error", "windows"] */
+    'linebreak-style': 0,
     // 'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
 
   },
