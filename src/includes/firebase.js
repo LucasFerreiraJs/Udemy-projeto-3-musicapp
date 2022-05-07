@@ -5,11 +5,11 @@ import 'firebase/firestore';
 import 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB1JvXoZ0fzvk9VbVZ_AQH_p_oyzSSIgIY",
-  authDomain: "udemy-musicapp.firebaseapp.com",
-  projectId: "udemy-musicapp",
-  storageBucket: "udemy-musicapp.appspot.com",
-  appId: "1:1006921706629:web:06ea8ed1e857b3646a0dec"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  appId: ""
 };
 
 // Initialize Firebase
